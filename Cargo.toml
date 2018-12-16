@@ -1,0 +1,8 @@
+[package]
+name = "toy_3d"
+version = "0.1.0"
+authors = ["Anthony Callahan"]
+edition = "2018"
+
+[dependencies]
+three = "0.3.1"
