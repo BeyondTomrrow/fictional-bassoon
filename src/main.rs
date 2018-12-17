@@ -12,22 +12,21 @@
 
 
 */
-//imports the crate..
+/// imports the crate..
+mod engine_backend;
 extern crate three;
 use three::Object;
+//use engine_backend::*;
 
-//plane will use pbr just to test.
-// TODO add pbr support / custom material loader & mesh importer.
 
-fn make_square() -> three::Geometry {
-    three::Geometry::plane(1.0, 1.0)
-}
 
 //programs main entry point.
 fn main()
 {
+    /// Window title
     let title = "Toy thing";
 
+    /// Creates a window with the title above.
     let mut window = three::Window::new(title); //crates a mutable window from the Three crate using the title variable.
 
     let material_1 = three::material::Basic {
@@ -35,11 +34,11 @@ fn main()
         .. Default::default()
     };
 
-    let mut mesh = window.factory.mesh(make_square(), material_1);
+    /*let mut mesh = window.factory.mesh(engine_backend::make_square(), material_1);
 
     window.scene.add(&mesh);
 
-    window.scene.background = three::Background::Color(0xC6FF0FF);
+    window.scene.background = three::Background::Color(0xC6FF0FF);*/
 
     //game loop
     let center = [0.0, 0.0];
